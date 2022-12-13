@@ -33,3 +33,7 @@ There are 10 specs.
 - System dependencies
 
 This application uses the rails [Geocoder](https://github.com/alexreisner/geocoder) and the [Open Meteo Weather API](https://open-meteo.com/en). This is an open source weather API and does not require API keys to function.
+
+- Video of the functionality
+
+https://share.vidyard.com/watch/RZ4p9NfFsVo1PkxEdP4vZY?
