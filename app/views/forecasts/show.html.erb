@@ -1,0 +1,18 @@
+
+    <h2>Current Temperature:</h2>
+    <h3><%= @forecast.current_temperature %> Degrees Fahrenheit</h3>
+<dl>
+    <% if flash[:query]%>
+        <dt>You Searched for:</dt>
+        <dd><%= flash[:query] %></dd>
+    <% end %>
+    <% if flash[:query]%>
+        <dt>Address:</dt>
+        <dd><%= flash[:address] %></dd>
+    <% end %>
+    <dt>Zip Code</dt>
+    <dd><%= @forecast.zip_code %></dd>
+    <dt>Last Updated At:</dt>
+    <dd><%= time_ago_in_words(@forecast.updated_at)%></dd>
+
+</dl>
