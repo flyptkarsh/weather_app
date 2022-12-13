@@ -21,7 +21,7 @@ then navigate to `localhost:3000`
 
 ### Running the Test Suite
 
-This application has Unit and Request specs built with Rspec.
+This application has unit and request specs built with Rspec.
 
 To run the test suite run:
 
