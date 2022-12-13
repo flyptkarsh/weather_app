@@ -1,5 +1,6 @@
 # frozen_string_literal: true
 
+# OpenMeteo api wrapper
 class OpenMeteo
   include HTTParty
   base_uri 'https://api.open-meteo.com'

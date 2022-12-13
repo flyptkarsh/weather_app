@@ -1,11 +1,13 @@
 # frozen_string_literal: true
 
+# Controller for the forecast pages
 class ForecastsController < ApplicationController
+  before_action :set_location, only: %i[create]
+
   def new; end
 
   def create
-    set_location
-    if @location.present? && set_forecast_by_location && set_current_temperature
+    if @location.present? && set_forecast_by_location
       flash[:query] = params[:address]
       flash[:address] = @location[:display_name]
       redirect_to forecast_path(@forecast)
@@ -28,6 +30,7 @@ class ForecastsController < ApplicationController
   def set_forecast_by_location
     # locations are unique by zip code
     @forecast = Forecast.find_or_initialize_by(zip_code: @location[:zip_code])
+    set_current_temperature
   end
 
   def set_current_temperature

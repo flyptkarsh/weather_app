@@ -1,5 +1,6 @@
 # frozen_string_literal: true
 
+# Forecast model
 class Forecast < ApplicationRecord
   validates :zip_code, presence: true, uniqueness: true
   validates :current_temperature, presence: true
