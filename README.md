@@ -28,7 +28,7 @@ To run the test suite run:
 bundle exec rspec spec
 ```
 
-There are 10 specs.
+There are 10 specs. The calls to the APIs Are stubbed.
 
 - System dependencies
 
