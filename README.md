@@ -1,24 +1,35 @@
-# README
+# Rails Weather
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+- Ruby Version
 
-Things you may want to cover:
+  3.1.2
 
-* Ruby version
+- Rails Version
 
-* System dependencies
+  7.0.4
 
-* Configuration
+- To Run the application locally
 
-* Database creation
+```
+rails db:create
+rails db:migrate
+rails s
+```
 
-* Database initialization
+then navigate to `localhost:3000`
 
-* How to run the test suite
+- Running the Test Suite
 
-* Services (job queues, cache servers, search engines, etc.)
+This application has Unit and Request specs built with Rspec.
 
-* Deployment instructions
+To run the test suite run:
 
-* ...
+```
+bundle exec rspec spec
+```
+
+There are 10 specs.
+
+- System dependencies
+
+This application uses the rails [Geocoder](https://github.com/alexreisner/geocoder) and the [Open Meteo Weather API](https://open-meteo.com/en). This is an open source weather API and does not require API keys to function.

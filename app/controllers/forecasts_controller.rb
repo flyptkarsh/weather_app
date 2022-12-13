@@ -34,7 +34,7 @@ class ForecastsController < ApplicationController
   end
 
   def set_current_temperature
-    return unless @forecast.last_updated_over_30_minutes_ago?
+    return true unless @forecast.last_updated_over_30_minutes_ago?
 
     # only update if the forecast is older than 30 minutes
     @forecast.current_temperature = OpenMeteo.new(@location[:lat], @location[:lng]).temperature
